@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{0D1014AF-7738-41A1-A4D2-E9F84352A531}</ProjectGuid>
+    <ProjectGuid>{154B2038-59CD-4F1D-A99A-CCC290107C2F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Lab.EF.Logic</RootNamespace>
-    <AssemblyName>Lab.EF.Logic</AssemblyName>
+    <RootNamespace>Lab.EF.Entities</RootNamespace>
+    <AssemblyName>Lab.EF.Entities</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>

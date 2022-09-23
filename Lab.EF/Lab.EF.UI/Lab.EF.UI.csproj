@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{721D1BF2-0629-430B-A807-DFADF95C84E5}</ProjectGuid>
+    <ProjectGuid>{B37FB9A0-5CCB-43B0-9CB9-06A35B11BE6D}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>Lab.EF.UI</RootNamespace>
     <AssemblyName>Lab.EF.UI</AssemblyName>
