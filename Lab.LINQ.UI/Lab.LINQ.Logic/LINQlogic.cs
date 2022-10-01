@@ -32,15 +32,13 @@ namespace Lab.LINQ.Logic
         {
             var context = new NorthwindContext();
 
-            var query = from Products in context.Products
-                        where Products.UnitsInStock == 0
-                        select Products;
+            var query = context.Products.Where(p => p.UnitsInStock == 0)
+                                 .Select(p => p);
 
             foreach (var item in query)
             {
                 Console.WriteLine($"{item.ProductID} - {item.ProductName} - {item.UnitsInStock}");
             }
-
         }
 
         public static void Ejercicio3()
@@ -78,15 +76,19 @@ namespace Lab.LINQ.Logic
         {
             var context = new NorthwindContext();
 
-            var query = context.Products.Where(p => p.ProductID = 789)
+            var query = context.Products.Where(p => p.ProductID == 789)
                                         .Select(p => p);
 
-            foreach (var item in query)
+            if (query.Count() > 1)
             {
-                Console.WriteLine($"{item.CustomerID} - {item.CompanyName} - {item.ContactTitle} - {item.Address} - {item.City} - " +
-                   $"{item.Region} - {item.PostalCode} - {item.Country} - {item.Phone} - {item.Fax}");
-
+                Console.WriteLine($"{query.ToList().FirstOrDefault()}");
             }
+            else
+            {
+                Console.WriteLine("NO hay producto con ese ID. ");
+            }
+            
+
 
         }
 
@@ -94,16 +96,29 @@ namespace Lab.LINQ.Logic
         {
             var context = new NorthwindContext();
 
-            var query = from Customers in context.Customers
-                        select Products;
 
+            var query2 = from Customers in context.Customers
+                               select Customers;
 
-            foreach (var item in query)
+            foreach (var item in query2)
             {
-                Console.WriteLine($"{item.CompanyName}");
+               Console.WriteLine($"{item.ContactName}".ToUpper() + $" - { item.ContactName}"
+                .ToLower());
 
             }
 
+
+        }
+
+        public static void Ejercicio7()
+        {
+            var context = new NorthwindContext();
+
+            var query2 = from customers in context.Customers
+                         join orders in context.Orders
+                         on customers.CustomerID equals orders.CustomerID
+                         where customers.Region == "WA" //and orders.OrderDate > 1/1/1997
+                         select orders;
         }
 
     }

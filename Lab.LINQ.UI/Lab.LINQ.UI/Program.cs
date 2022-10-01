@@ -72,7 +72,10 @@ namespace Lab.LINQ.UI
                             break;
 
                         case 6:
-
+                            Console.Clear();
+                            Console.WriteLine("Nombres de customers en mayuscula:  ");
+                            LINQlogic.Ejercicio6();
+                            Console.ReadKey();
                             break;
 
                         case 7: 
