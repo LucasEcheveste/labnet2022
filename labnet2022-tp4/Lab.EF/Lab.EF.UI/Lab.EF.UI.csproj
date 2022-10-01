@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{814CEFA3-40E1-4EC4-B430-859176C36F92}</ProjectGuid>
+    <ProjectGuid>{B37FB9A0-5CCB-43B0-9CB9-06A35B11BE6D}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Lab.LINQ.UI</RootNamespace>
-    <AssemblyName>Lab.LINQ.UI</AssemblyName>
+    <RootNamespace>Lab.EF.UI</RootNamespace>
+    <AssemblyName>Lab.EF.UI</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -58,13 +58,17 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Lab.LINQ.Entities\Lab.LINQ.Entities.csproj">
-      <Project>{93a249b0-d87c-4300-8a10-c9b35da7d449}</Project>
-      <Name>Lab.LINQ.Entities</Name>
+    <ProjectReference Include="..\Lab.EF.Components\Lab.EF.Components.csproj">
+      <Project>{a7eb6068-72fb-4063-8eca-a0f4867e7968}</Project>
+      <Name>Lab.EF.Components</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Lab.LINQ.Logic\Lab.LINQ.Logic.csproj">
-      <Project>{0d5b2a72-5adc-4042-9b21-083c3bedb923}</Project>
-      <Name>Lab.LINQ.Logic</Name>
+    <ProjectReference Include="..\Lab.EF.Entities\Lab.EF.Entities.csproj">
+      <Project>{154b2038-59cd-4f1d-a99a-ccc290107c2f}</Project>
+      <Name>Lab.EF.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Lab.EF.Logic\Lab.EF.Logic.csproj">
+      <Project>{0d1014af-7738-41a1-a4d2-e9f84352a531}</Project>
+      <Name>Lab.EF.Logic</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

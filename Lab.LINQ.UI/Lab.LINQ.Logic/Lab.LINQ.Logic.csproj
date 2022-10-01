@@ -48,11 +48,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Baselogic.cs" />
+    <Compile Include="LINQlogic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Lab.LINQ.Data\Lab.LINQ.Data.csproj">
+      <Project>{60B32BBA-9354-437D-AD53-5C08552478C4}</Project>
+      <Name>Lab.LINQ.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Lab.LINQ.Entities\Lab.LINQ.Entities.csproj">
+      <Project>{93A249B0-D87C-4300-8A10-C9B35DA7D449}</Project>
+      <Name>Lab.LINQ.Entities</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
